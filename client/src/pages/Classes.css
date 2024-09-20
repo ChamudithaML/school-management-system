@@ -1,0 +1,42 @@
+.classes-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.class-box {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.class-box:hover {
+    background-color: lightblue;
+}
+
+.A {
+    background-color: lightcoral;
+}
+
+.B {
+    background-color: lightgreen;
+}
+
+.C {
+    background-color: lightpink;
+}
+
+.D {
+    background-color: lightyellow;
+}

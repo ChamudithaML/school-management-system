@@ -1,0 +1,7 @@
+.temp-name-hm{
+    background-color: rgb(255, 98, 229);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
