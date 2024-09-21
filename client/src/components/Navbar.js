@@ -35,7 +35,7 @@ function Navbar() {
       <div className='container-main'>
 
         <Link to="/" className='cassia-logo' onClick={closeMobileMenu}>
-          My School <span style={{ color: 'transparent' }}>0</span><i class="fa-solid fa-book-open-reader nav-icon-align"></i>
+          My School <span style={{ color: 'transparent' }}>0</span><i className="fa-solid fa-book-open-reader nav-icon-align"></i>
         </Link>
 
         <div className={click ? 'ul-menu active' : 'ul-menu'}>

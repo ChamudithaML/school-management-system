@@ -10,7 +10,7 @@ function Footer() {
                     <div className='footer-logo'>
                         <Link to='/' className='social-logo'>
                             My School
-                            <i class="fa-solid fa-book-open-reader footer-icon-align"></i>
+                            <i className="fa-solid fa-book-open-reader footer-icon-align"></i>
                         </Link>
                     </div>
                     <small className='author'>By Lilan Chamuditha (2024)</small>
