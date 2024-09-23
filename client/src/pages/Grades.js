@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Grades = () => {
     return (
         <div className="grid-container">
-            <Link to="/grade1" className='grade-links'>
+            <Link to="/grades/class" className='grade-links'>
                 <div className="box">Grade 1</div>
             </Link>
             <div className="box">Grade 2</div>

@@ -37,6 +37,10 @@ export default function AddStudentForm({ getUsers, closeForm }) {
                         <label className="form-label">Age</label>
                         <input type="text" className="form-input" name="age" onChange={handleChange} />
                     </div>
+                    <div className="form-group">
+                        <label className="form-label">Class</label>
+                        <input type="text" className="form-input" name="letter" onChange={handleChange} />
+                    </div>
                     <button type="submit" name="add" className="form-button">Save</button>
                 </form>
             </div>

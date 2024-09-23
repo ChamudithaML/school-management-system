@@ -31,7 +31,6 @@ export default function EditStudentForm({ id, getUsers, closeEditForm }) {
             getUsers();
             closeEditForm();
         });
-
     }
 
     return (
@@ -46,6 +45,10 @@ export default function EditStudentForm({ id, getUsers, closeEditForm }) {
                     <div className="edit-form-group">
                         <label className="edit-form-label">Age</label>
                         <input type="text" value={inputs.age} className="edit-form-input" name="age" onChange={handleChange} />
+                    </div>
+                    <div className="edit-form-group">
+                        <label className="edit-form-label">Class</label>
+                        <input type="text" value={inputs.letter} className="edit-form-input" name="letter" onChange={handleChange} />
                     </div>
                     <button type="submit" name="update" className="edit-form-button">Save</button>
                 </form>
