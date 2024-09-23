@@ -19,6 +19,18 @@ def list_users():
 
     return jsonify(results)
 
+@app.route('/class/<letter>', methods=['GET'])
+def class_students(letter):
+    all_users = students_collection.find({'letter': letter})
+    results = []
+
+    for user in all_users:
+        user_data = student_schema.dump(user)
+        user_data['id'] = str(user['_id'])  
+        results.append(user_data)
+
+    return jsonify(results)
+
 @app.route('/userdetails/<id>', methods=['GET'])
 def userdetails(id):
     user = students_collection.find_one({'_id': ObjectId(id)})
@@ -37,11 +49,14 @@ def userupdate(id):
     if user:
         name = request.json.get('name')
         age = request.json.get('age')
+        letter = request.json.get('letter')
 
         if name:
             user['name'] = name
         if age:
             user['age'] = age
+        if letter:
+            user['letter'] = letter.upper()
 
         students_collection.update_one({'_id': ObjectId(id)}, {'$set': user})
 
@@ -67,11 +82,13 @@ def userdelete(id):
 def useradd():
     name = request.json['name']
     age = request.json['age']
+    letter = request.json['letter']
     date = datetime.datetime.now()
 
     new_user = {
         'name': name,
         'age': age,
+        'letter':letter.upper(),
         'date': date
     }
 
