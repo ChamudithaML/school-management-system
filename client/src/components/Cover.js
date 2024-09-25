@@ -6,8 +6,8 @@ import './Cover.css';
 function Cover() {
   return (
     <div className='hero-container'>
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <h1 className='hero-title'>My School</h1>
+      <p className='hero-text'>School Management System</p>
       <div className='hero-btns'>
         {/* <Button
           className='btns'

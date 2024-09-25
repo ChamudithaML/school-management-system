@@ -26,6 +26,24 @@ export default function EditStudentForm({ id, getUsers, closeEditForm }) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        const { name, age, letter } = inputs;
+
+        if (!name || typeof name !== 'string' || name.trim().length === 0) {
+            alert('Name is required and should be a string.');
+            return;
+        }
+        inputs.name = name.charAt(0).toUpperCase() + name.slice(1);
+
+        if (!age || isNaN(age) || age < 3 || age > 25) {
+            alert('Age should be a number between 3 and 25.');
+            return;
+        }
+
+        if (!letter || letter.length !== 1 || !['A', 'B', 'C', 'D'].includes(letter.toUpperCase())) {
+            alert('Class should be a single letter: A, B, C, or D.');
+            return;
+        }
+
         axios.put(`http://127.0.0.1:5000/userupdate/${id}`, inputs).then(function (response) {
             console.log(response.data);
             getUsers();

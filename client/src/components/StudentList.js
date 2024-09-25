@@ -48,7 +48,7 @@ const StudentList = ({ letter }) => {
     const closeEditForm = () => {
         setEditUserId(null);
     };
-
+    
     return (
         <div className="user-list-container">
             <div className="user-list-wrapper">
@@ -85,7 +85,8 @@ const StudentList = ({ letter }) => {
                                 <td>{user.name}</td>
                                 <td>{user.age}</td>
                                 <td>{user.letter}</td>
-                                <td>{user.date}</td>
+                                <td>{new Date(user.date).toISOString().split('T')[0]}</td>
+
                                 <td>
                                     <p className="edit-button" onClick={() => editStudentForm(user.id)}>Edit</p>
 
